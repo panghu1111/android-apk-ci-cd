@@ -16,7 +16,7 @@ app/
   android-release.yml   # signed release APK on a v* tag
 ```
 
-Toolchain: AGP 9.0.1, Gradle 9.1, compileSdk 35, minSdk 21, JDK 17.
+Toolchain: AGP 9.0.1, Gradle 9.1.0, compileSdk 35, minSdk 21, JDK 17.
 
 ## Debug build
 

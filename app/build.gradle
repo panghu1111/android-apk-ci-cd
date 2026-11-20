@@ -17,7 +17,7 @@ android {
     signingConfigs {
         release {
             def ksFile = System.getenv("KEYSTORE_FILE")
-            if (ksFile) {
+            if (ksFile && ksFile.trim()) {
                 storeFile file(ksFile)
                 storePassword System.getenv("KEYSTORE_PASSWORD")
                 keyAlias System.getenv("KEY_ALIAS")
