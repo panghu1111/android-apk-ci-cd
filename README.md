@@ -25,7 +25,7 @@ The workflow sets up JDK 17, caches Gradle, runs `./gradlew assembleDebug`, and 
 
 ## Signed release build
 
-Triggered by pushing a `v*` tag or manual dispatch. Before the first release, add these secrets in **Settings → Secrets and variables → Actions**:
+Triggered by pushing a `v*` tag or manual dispatch. The workflow builds the APK, uploads it as an artifact, and creates a GitHub Release (`gh release create`) with the APK attached. Before a signed release, add these secrets in **Settings → Secrets and variables → Actions**:
 
 | Secret | Value |
 |---|---|
