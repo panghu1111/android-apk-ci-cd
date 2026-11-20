@@ -29,7 +29,8 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            signingConfig signingConfigs.release
+            def hasKeystore = System.getenv("KEYSTORE_FILE")?.trim()
+            signingConfig hasKeystore ? signingConfigs.release : signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
